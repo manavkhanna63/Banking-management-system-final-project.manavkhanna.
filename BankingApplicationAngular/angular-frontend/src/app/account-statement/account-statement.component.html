@@ -1,0 +1,9 @@
+
+<div class="text-center">
+    <div class="form-group">
+        <label>Account Number</label>
+        <input type="number" class="form-control" id="accountNumber" placeholder="Enter the account number to get the statement"
+            [(ngModel)] = "accountNumber" name="accountNumber">
+    </div>
+    <button (click) = "getAccountStatementByAccountNumber(accountNumber)" class = "btn btn-info" style="margin-left: 10px">Submit</button>
+</div>

@@ -1,0 +1,45 @@
+
+<h3 class="text-center">Account Statement</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Account Number</th>
+            <th>Current Balance</th>
+            <th>Customer Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{accountNumber}}</td>
+            <td>{{accountStatement.currentBalance | currency: 'USD'}}</td>
+            <td>{{accountStatement.customerName}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 class="text-center">Transactions</h4>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>Transaction Time/Date</th>
+            <th>Transaction Type</th>
+            <th>To Account Number</th>
+            <th>From Account Number</th>
+            <th>In Account Number</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tbody>
+            <tr *ngFor=" let transaction of transactions">
+                <td>{{transaction.transactionId}}</td>
+                <td>{{transaction.transactionDateTime}}</td>
+                <td>{{transaction.transactionType}}</td>
+                <td>{{transaction.toAccount}}</td>
+                <td>{{transaction.fromAccount}}</td>
+                <td>{{transaction.inAccount}}</td>
+                <td>{{transaction.amount | currency: 'USD'}}</td>
+            </tr>
+    </tbody>
+</table>

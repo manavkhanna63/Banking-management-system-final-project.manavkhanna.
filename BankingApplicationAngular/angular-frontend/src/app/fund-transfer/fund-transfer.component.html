@@ -1,0 +1,29 @@
+
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Transfer</h3>
+    <form (ngSubmit) = "transferFund()">
+        <div class="form-group">
+            <label>Sender's Account Number</label>
+            <input type="number" class="form-control" id="fromAccount" placeholder="Enter the account number from where you want transfer money"
+            [(ngModel)] = "fundTransfer.fromAccount" name="fromAccount">
+
+        </div>
+        <div class="form-group">
+            <label>Recipient's Account Number</label>
+            <input type="number" class="form-control" id="toAccount" placeholder="Enter the account number where you want to transfer money to"
+            [(ngModel)] = "fundTransfer.toAccount" name="toAccount">
+
+        </div>
+        <div class="form-group">
+            <label>Amount (USD)</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter the amount you want to transfer"
+            [(ngModel)] = "fundTransfer.amount" name="amount">
+
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</div>

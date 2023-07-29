@@ -1,0 +1,18 @@
+<h3 class="text-center">List of Accounts</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Account Number</th>
+            <th>Account Type</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.accountNumber}}</td>
+            <td>{{account.accountType}}</td>
+            <td>{{account.accountBalance | currency: 'USD'}}</td>
+        </tr>
+    </tbody>
+</table>
+
